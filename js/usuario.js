@@ -1,13 +1,4 @@
 /*
-*clase usuario
-*/
-class Usuario{
-    nombreUsuario="";
-    constructor(nombreUsuario){
-        this.nombreUsuario=nombreUsuario;
-    }
-}
-/*
 *variables globales
 */
 const btn=document.getElementById('button-footer');
