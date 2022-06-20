@@ -162,6 +162,9 @@ footer{
 .texto-comentario{
     margin-left: 15%;
 }
+.salir{
+    
+}
 @media screen and (max-width:765px){
     .navbar, .navbar-expand-lg, .navbar-light {
         margin-left: 63px;

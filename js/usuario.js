@@ -3,6 +3,7 @@
 */
 const btn=document.getElementById('button-footer');
 const btnAgregar=document.getElementById('agregarComentario');
+const salirLogin=document.getElementById('btn-Salir');
 const nombreUsuarios=[
 ];
 const comentarios=[
@@ -11,6 +12,12 @@ const comentarios=[
 let boolean=false;
 let contador=0;
 let i=0;
+let add=document.getElementById("salir2");
+let o = document.getElementById("salir");
+add.style.display="none";
+
+
+
 /**
  *funcion que permite validar el ingreso del usuario
  **/
@@ -35,16 +42,10 @@ isLoggedIn(boolean);
  *funcion que permite cambiar el estado 
  **/
 function cambiar(boolean){
-let databstoggle=document.querySelectorAll('data-bs-toggle')
-let o = document.getElementById("salir");
 if(boolean){    
-o.innerHTML ='salir';
-var ca = document.querySelector('#bs-toggle');
-var fca = ca.dataset.bstoggle = "none";
-
+o.style.display ='none';
 }
 }
-
 /**
  *verifica y confirma si logro ingresar o no
  **/
@@ -63,6 +64,7 @@ function validarLogin(nombreUsuario) {
     }
     if(boolean){
         cambiar(boolean);
+        add.style.display="block";
     }
     return boolean;
 }
@@ -108,3 +110,19 @@ alert("agrego un comentario");
     alert(" para comentar debe ingresar primero ");
 }
 }
+
+/*
+Funcion que muestra o no el ingreso o salida del nombre de usuario
+*/
+ function salir(){
+ 
+boolean=false;
+    if(boolean==false){    
+        o.style.display ='block';
+        add.style.display="none";
+        }
+console.log(boolean);
+}
+
+
+
