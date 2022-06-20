@@ -19,6 +19,7 @@ const comentarios=[
 ];
 let boolean=false;
 let contador=0;
+let i=0;
 /**
  *funcion que permite validar el ingreso del usuario
  **/
@@ -43,9 +44,13 @@ isLoggedIn(boolean);
  *funcion que permite cambiar el estado 
  **/
 function cambiar(boolean){
+let databstoggle=document.querySelectorAll('data-bs-toggle')
 let o = document.getElementById("salir");
-if(boolean){
+if(boolean){    
 o.innerHTML ='salir';
+var ca = document.querySelector('#bs-toggle');
+var fca = ca.dataset.bstoggle = "none";
+
 }
 }
 
@@ -75,18 +80,35 @@ function validarLogin(nombreUsuario) {
  *funcion que permite ingresar un comentario
  **/
 function isLoggedIn(boolean) {
-let nombreUsuario= document.getElementById('nombreUsuario');
+//let nombreUsuario= document.getElementById('nombreUsuario');
 let comentarioAgregar= document.getElementById('exampleFormControlTextarea1').value;
-let comentario= document.getElementById('comentario');
+//let comentario= document.getElementById('comentario');
 let usuario=localStorage.getItem('NombreUsuario');
+
+const agregar=document.getElementById('texto-comentario');
 if(boolean){
  //   localStorage.setItem("comentarios", JSON.stringify({usuario:usuario,comentario:comentarioAgregar}));
   //  let comentarios=JSON.parse(localStorage.getItem("comentarios"));
-     comentarios.push({usuario:usuario,comentario:comentarioAgregar});
- for(let i=0; i<comentarios.length; i++){
-    nombreUsuario.innerHTML=  comentarios[i].usuario;
-    comentario.innerHTML=comentarios[i].comentario;
- }
+comentarios.push({usuario:usuario,comentario:comentarioAgregar});
+   // nombreUsuario.innerHTML=comentarios[i].usuario;
+   // comentario.innerHTML=comentarios[i].comentario;
+   let h2 = document.createElement('h2');
+   let p=document.createElement('p');
+   let img=document.createElement('img');
+   let div =document.createElement('div');
+   let div2 =document.createElement('div');
+   img.src = "./img/descarga (15).jpg";
+   img.setAttribute("id","img");
+   div.setAttribute("id","div-comentario");
+   div2.setAttribute("id","div-comentario2")
+   h2.innerHTML=usuario;
+   p.innerHTML=comentarios[i].comentario;
+   div2.appendChild(h2);
+   div2.appendChild(p);
+   div.appendChild(img);
+   div.appendChild(div2);
+   agregar.appendChild(div);
+   i=i+1;
 const numerosComentarios=document.getElementById('contador');
 contador+=1;
 numerosComentarios.innerHTML=contador;
