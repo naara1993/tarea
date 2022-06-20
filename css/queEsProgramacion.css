@@ -29,24 +29,6 @@ nav .navbar-nav{
 .navbar,.navbar-expand-lg,.navbar-light{
     margin-left:47px;
 }
-.img{
-    border-radius: 30px;
-    height:550px;
-    width:100%;
-    color:white;
-    background-image: url('/img/coding-924920_960_720.jpg');
-    background-size: cover;
-    background-position: center;
-    background-color: rgba(0,0,0,0.4);
-    background-blend-mode: darken;
-}
-.cover-card{
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    text-align: center;
-    padding-top: 20%;
-}
 .modal-body{
     display: flex;
     padding: 40px;
@@ -71,33 +53,25 @@ input[type="text"]{
     width:100%;
 
 }
-figure ,.text-center{
-    padding: 15px 0px 15px 0px;
+
+blockquote{
+    display:flex;
+    justify-content: flex-start;
+    background-color: rgb(212 234 254 / 19%);
+    height:100px;
+    padding-left:5px;
+    padding-top: 20px;
 }
-main{
-  padding: 20px;
-  margin:10px;
-}
-.card-body{
+
+.card{  
     border:0px;
-    font-size: small;
-    border-radius:30px;
-}
-article{
-    padding: 10px;
-}
-.card {
-    border:0px;
-    border-radius:30px;
-    box-shadow: 0px 3px 0px 3px  rgb(253, 251, 251);
+    align-items:center;
 }
 .card-img-top{
-    border-radius: 20px;
+    width:60%;
 }
-.card-text-subtitle{ 
-    color:rgba(246, 174, 41, 0.813);
-    font-weight: 700;
-
+.card-body{
+    width:60%;
 }
 footer{
     background-color: rgba(0, 0, 0, 0.744);
@@ -161,19 +135,30 @@ footer{
     text-align: center;
 
 }
+.form-section{
+    background-color: aliceblue;
+}
+.form{
+    padding: 65px;
+}
+.agregarComentario{
+    padding: 50px;
+    text-align: center;
+}
+.contenedor-cometarios{
+    padding: 50px;
+}
+.contenido-comentario{
+    padding: 15px;
+    margin-top:5%;
+}
+.img-comentario{
+    float: left;
+}
+.texto-comentario{
+    margin-left: 15%;
+}
 @media screen and (max-width:765px){
-    .img{
-        border-radius: 30px;
-        height: auto;
-        width: auto;
-    }
-    .cover-card{
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        text-align: center;
-        padding-bottom: 45px;
-    }
     .navbar, .navbar-expand-lg, .navbar-light {
         margin-left: 63px;
     }

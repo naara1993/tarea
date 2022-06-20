@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./css/queEsProgramacion.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header class="container-fluid">
+      <div class="row">
+        <div class="logo-title">
+          <img
+            src="./img/images (1).png"
+            width="100px"
+            height="100px"
+            class="img-fluid"
+            alt="logo escuela"
+          />
+          <h2 id="titulo-logo" class="h2 px-3">E-Learning</h2>
+        </div>
+        <nav class="navbar navbar-expand-md navbar-light">
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="./index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Features</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Pricing</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Disabled</a>
+              </li>
+              <li class="nav-item">
+                <div id="remove">
+                  <a
+                    id="salir"
+                    class="nav-link nav-modal"
+                    data-bs-toggle="modal"
+                    data-bs-target="#exampleModal"
+                    >Login</a
+                  >
+                </div>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <section class="">
+      <blockquote class="blockquote row">
+        <p class="h3">¿Qué es programación?</p>
+      </blockquote>
+    </section>
+
+    <section class="container-fluid">
+      <div class="card mb-3">
+        <img
+          src="./img/istockphoto-1339450271-170667a.jpg"
+          class="card-img-top"
+          alt="..."
+        />
+        <div class="card-body">
+          <h5 class="card-title">Funcionamiento de un programa</h5>
+          <p class="card-text">
+            Para crear un programa y que la computadora lo interprete y ejecute,
+            las instrucciones deben escribirse en un lenguaje de programación.
+            El lenguaje entendido por una computadora se conoce como código
+            máquina. Consiste en secuencias de instrucciones básicas que el
+            procesador reconoce, codificadas como cadenas de números 1 y 0
+            (sistema binario). En los primeros tiempos de la computación se
+            programaba directamente en código máquina. Escribir programas así
+            resultaba demasiado complicado, también era difícil entenderlos y
+            mantenerlos una vez escritos. Con el tiempo, se fueron desarrollando
+            herramientas para facilitar el trabajo.
+          </p>
+          <h5 class="card-title">Léxico y programación</h5>
+          <p class="card-text">
+            La programación se rige por reglas y un conjunto más o menos
+            reducido de órdenes, expresiones, instrucciones y comandos que
+            tienden a asemejarse a una lengua natural acotada (en inglés); y que
+            además tienen la particularidad de una reducida ambigüedad. En los
+            lenguajes de programación se distinguen diversos elementos entre los
+            que se incluyen el léxico propio del lenguaje y las reglas
+            semánticas y sintácticas. Dentro del léxico, generalmente se
+            utilizan símbolos y palabras con funciones específicas dentro del
+            lenguaje. Estas palabras suelen tomarse del inglés y no se las puede
+            utilizar de manera diferente: son las denominadas palabras
+            reservadas. Otra particularidad de los lenguajes es el permitir a
+            los programadores el uso de comentarios: frases o párrafos sin
+            funcionalidad en el programa, que los compiladores o intérpretes
+            descartan y solo están destinados a ser leídos por personas; así se
+            pueden dejar explicaciones que ayuden a entender el código a quien
+            lo lea
+          </p>
+          <p class="card-text">
+            <small class="text-muted">Last updated 3 mins ago</small>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="form-section">
+      <h3 class="h3 agregarComentario">Deja un comentario</h3>
+      <form class="form">
+        <div class="mb-3">
+          <label for="exampleFormControlTextarea1" class="form-label"
+            >Agrega un comentario</label
+          >
+          <textarea
+            class="form-control"
+            id="exampleFormControlTextarea1"
+            rows="3" required
+          ></textarea>
+        </div>
+        <button type="button" id="agregarComentario" class="btn btn-primary">Agregar</button>
+      </form>
+    </section>
+
+    <section class="agregar container-fluid">
+      <div class="contenedor-cometarios">
+        <div>
+          <h3 class=" d-flex comentarios">Comentarios
+
+            <p class="mx-3" id="contador">
+
+            </p>
+
+          </h3>
+          <div class="contenido-comentario">
+              <div class="texto-comentario">
+                <h2 class="nombreUsuario" id="nombreUsuario"></h2>
+                <p class="comentario" id="comentario"> </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Login</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <img
+              class="img-modal"
+              src="./img/descarga (4).png"
+              width="40px"
+              height="40px"
+              alt="login"
+            />
+            <input
+              type="text"
+              name="NombreUsuario"
+              id="NombreUsuario"
+              placeholder="UserName"
+            />
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              id="button-footer"
+              class="btn btn-dark"
+              data-bs-dismiss="modal"
+            >
+              Ingresar
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-4 col-lg-4 col-sm-12">
+            <div class="contenido1">
+              <p class="title">E-Learning</p>
+              <p>Ofreciendo calidad y contenido educativo de muy buen nivel</p>
+            </div>
+          </div>
+
+          <div class="col-md-4 col-lg-4 col-sm-12">
+            <div class="contenido2">
+              <p class="h5">¡Seguinos para mas novedades!</p>
+              <div class="redesSociales">
+                <img class="img-redes" src="./img/descarga (12).jpg" alt="" />
+                <img class="img-redes" src="./img/descarga (5).png" alt="" />
+                <img class="img-redes" src="./img/descarga (6).png" alt="" />
+                <img class="img-redes" src="./img/descarga (7).png" alt="" />
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 col-lg-4 col-sm-12">
+            <div class="contenido3">
+              <p class="h5">Contacto</p>
+              <div class="seccion-contacto">
+                <div class="contacto">
+                  <img
+                    class="img-contacto"
+                    src="./img/descarga (8).png"
+                    alt=""
+                  />
+                  <p>15-4433-4321</p>
+                </div>
+                <div class="contacto">
+                  <img
+                    class="img-contacto"
+                    src="./img/descarga (13).jpg"
+                    alt=""
+                  />
+                  <p>san martin 34054,caba.</p>
+                </div>
+                <div class="contacto">
+                  <img
+                    class="img-contacto"
+                    src="./img/descarga (14).jpg"
+                    alt=""
+                  />
+                  <p>example@gmail.com</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+      integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js"
+      integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="./js/usuario.js"></script>
+  </body>
+</html>
